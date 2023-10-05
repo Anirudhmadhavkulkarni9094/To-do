@@ -46,6 +46,7 @@ function AddingNewTask({ handleClose }) {
             placeholder='Title'
             onChange={(e) => handleTitle(e)}
             value={Title} // Bind the input value to the title state
+            required={true}
           />
         </div>
         <div className='task-input'>
@@ -54,6 +55,7 @@ function AddingNewTask({ handleClose }) {
             placeholder='Description'
             onChange={(e) => handleDesc(e)}
             value={Desc} // Bind the textarea value to the description state
+            required={true}
           />
         </div>
         <button className='btn-task' type='submit'>
