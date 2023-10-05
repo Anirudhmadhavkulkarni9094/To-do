@@ -6,7 +6,7 @@ import Card from './Card';
 function Completed() {
   const [tasks, setTasks] = useState([]);
   useEffect(()=>{
-    axios.get('http://localhost:3001/api/v1/task').then(res=>{
+    axios.get('https://to-do-w2m4.onrender.com/api/v1/task').then(res=>{
         setTasks(res.data)
     }).catch(err=>{
         console.log(err)

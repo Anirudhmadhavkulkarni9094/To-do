@@ -13,7 +13,7 @@ function AddingNewTask({ handleClose }) {
 
     // Send a POST request to the server to add a new task
     axios
-      .post('http://localhost:3001/api/v1/task', {
+      .post('https://to-do-w2m4.onrender.com/api/v1/task', {
         title: Title, // Pass the title from the state
         Desc: Desc,   // Pass the description from the state
       })

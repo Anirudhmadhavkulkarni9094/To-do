@@ -11,7 +11,7 @@ function Pending() {
   const [desc, setDesc] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:3001/api/v1/task').then((res) => {
+    axios.get('https://to-do-w2m4.onrender.com/api/v1/task').then((res) => {
       setTasks(res.data);
     }).catch((err) => {
       console.log(err);
@@ -21,7 +21,7 @@ function Pending() {
 
   const handleComplete = (id) => {
     console.log('Completed');
-    axios.post(`http://localhost:3001/api/v1/task/${id}`).then(() => {
+    axios.post(`https://to-do-w2m4.onrender.com/api/v1/task/${id}`).then(() => {
       alert('Task moved to working');
       // You might want to update the task's status in your state here.
     });
@@ -29,7 +29,7 @@ function Pending() {
 
   const handleDelete = (id) => {
     console.log('Deleted');
-    axios.delete(`http://localhost:3001/api/v1/task/${id}`).then(() => {
+    axios.delete(`https://to-do-w2m4.onrender.com/api/v1/task/${id}`).then(() => {
       alert('Task deleted successfully');
       // You might want to remove the task from your state here.
     });
@@ -63,7 +63,7 @@ function Pending() {
       return;
     }
 
-    axios.post(`http://localhost:3001/api/v1/task/update/${editTask._id}`, {
+    axios.post(`https://to-do-w2m4.onrender.com/api/v1/task/update/${editTask._id}`, {
       title,
       Desc: desc,
     }).then(() => {
