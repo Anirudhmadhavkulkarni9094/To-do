@@ -6,6 +6,9 @@
     margin: 1rem 0.5rem !important;
     padding: 1rem;
     overflow: scroll;
+    position: relative;
+  
+    
 }
 
 .Slab::-webkit-scrollbar {
@@ -32,7 +35,7 @@
     padding: 1rem;
     margin: 5px 2px;
     border-radius: 5px;
-    z-index: -1;
+    /* z-index: -1; */
     background: linear-gradient(-25deg ,white , lightblue, rgb(143, 143, 255));
 }
 
@@ -92,6 +95,11 @@
 .edit-task{
   display: flex;
   flex-direction: column;
+  
+}
+
+.newTask{
+  z-index: 100;
 }
 
 .edit-task input{
@@ -131,4 +139,11 @@
   top: 1rem;
   position: absolute;
   width: 1.5rem;
+}
+
+.newTaskImg{
+  position: absolute;
+  right: 0;
+  width: 50%;
+  z-index: 23;
 }
