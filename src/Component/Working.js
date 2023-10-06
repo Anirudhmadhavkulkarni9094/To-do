@@ -6,6 +6,7 @@ function Working() {
   const [tasks, setTasks] = useState([]);
   useEffect(()=>{
     axios.get('http://localhost:3001/api/v1/task').then(res=>{
+      console.log(res.data)
         setTasks(res.data)
     }).catch(err=>{
         console.log(err)
