@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Pending.css'
+import './Asset/StyleSheet/Pending.css'
 import axios from 'axios'
 
 function Working() {
@@ -34,13 +34,13 @@ function Working() {
     <>
       <div className='Slab'>
         <h3>Working on - {pendingTasks.length} tasks</h3>
-        {pendingTasks.length === 0 && <img src={require('./Completing.png')} className='empty' alt=''></img>}
+        {pendingTasks.length === 0 && <img src={require('./Asset/Image/Completing.png')} className='empty' alt=''></img>}
         <div>
           {pendingTasks.map(task => (
             <div key={task.id} className='pending-card'>
               <h4 title={task.Desc }>Title: {task.title}</h4>
               <p className='black'>{task.status}</p>
-              <p className='date'><img src={require('./refresh.png')} className='refresh' alt=''></img> last updated on {reverseString(task.Date.toString().slice(0,10))}</p> 
+              <p className='date'><img src={require('./Asset/Image/refresh.png')} className='refresh' alt=''></img> last updated on {reverseString(task.Date.toString().slice(0,10))}</p> 
               <button className='btn' onClick={()=>handleCompletion(task._id)}>Complete</button>
               <button className='btn' onClick={()=>handleBack(task._id)}>Revert</button>
             </div>

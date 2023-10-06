@@ -2,7 +2,7 @@ import React from 'react'
 import Pending from './Pending'
 import Working from './Working'
 import Completed from './Completed'
-import './Task.css'
+import './Asset/StyleSheet/Task.css'
 function Task() {
   return (
     <div className='task-table'>

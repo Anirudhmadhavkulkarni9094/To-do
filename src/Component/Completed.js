@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Completed.css'
+import './Asset/StyleSheet/Completed.css'
 import axios from 'axios'
 import Card from './Card';
 
@@ -22,7 +22,7 @@ function Completed() {
     <>
       <div className='Slab'>
         <h3>Completed - {pendingTasks.length} tasks</h3>
-        {pendingTasks.length === 0 && <img className='empty' src={require('./completed.png')} alt=''></img>}
+        {pendingTasks.length === 0 && <img className='empty' src={require('./Asset/Image/completed.png')} alt=''></img>}
         <div>
           {pendingTasks.map(task => (
             <div key={task.id} className='pending-card'>

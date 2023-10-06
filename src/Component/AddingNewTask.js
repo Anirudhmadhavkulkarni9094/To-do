@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Pending.css';
+import './Asset/StyleSheet/Pending.css';
 import axios from 'axios';
 
 function AddingNewTask({ handleClose }) {
@@ -42,7 +42,7 @@ function AddingNewTask({ handleClose }) {
 
   return (
     <div className='form-task'>
-      <img src={require('./close.png')} alt='' onClick={handleClose} className='closeButton'></img>
+      <img src={require('./Asset/Image/close.png')} alt='' onClick={handleClose} className='closeButton'></img>
       <form onSubmit={handleAddingTask}>
         <div className='task-input'>
           <label>Title</label>

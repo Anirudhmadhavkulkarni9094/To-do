@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Pending.css';
+import './Asset/StyleSheet/Pending.css';
 import axios from 'axios';
 import AddingNewTask from './AddingNewTask';
 
@@ -99,7 +99,7 @@ function Pending() {
           <button className='btn' onClick={handleNewTask}>Add new Task +</button>
         </div>
           {
-            (pendingTasks.length === 0) && <img src={require('./NEWTASK.png')} className='newTaskImg' alt=''></img> 
+            (pendingTasks.length === 0) && <img src={require('./Asset/Image/NEWTASK.png')} className='newTaskImg' alt=''></img> 
           }
         <div>
           {pendingTasks.map((task) => (
@@ -107,7 +107,7 @@ function Pending() {
               <h4 title={task.Desc}>Title: {task.title.toUpperCase()}</h4>
               <p className="red">status: {task.status}</p>
               <p className='date'>
-                <img src={require('./refresh.png')} className='refresh' alt='' />
+                <img src={require('./Asset/Image/refresh.png')} className='refresh' alt='' />
                 last updated on {reverseString(task.Date.toString().slice(0, 10))}
               </p>
               <button onClick={() => handleComplete(task._id)} className='btn'>Start</button>
