@@ -52,10 +52,30 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    background-color: black;
-    color: aliceblue;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding: 3rem;
-    width: 20rem;
+    max-width: 100%;
+    border-radius: 2rem;
+    border: 2px solid black;
   }
 
-  
+  .newTask input{
+    background-color: rgba(250, 235, 215, 0.308);
+  }
+
+  .newTask input:focus{
+    background-color: antiquewhite;
+  }
+  .newTask textarea{
+    background-color: rgba(250, 235, 215, 0.308);
+  }
+
+  .newTask textarea:focus{
+    border: none;
+    background-color: antiquewhite;
+  }
+
+  .newTask label{
+    font-weight: 600;
+  }

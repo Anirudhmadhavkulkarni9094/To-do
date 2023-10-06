@@ -42,6 +42,7 @@ function AddingNewTask({ handleClose }) {
 
   return (
     <div className='form-task'>
+      <img src={require('./close.png')} alt='' onClick={handleClose} className='closeButton'></img>
       <form onSubmit={handleAddingTask}>
         <div className='task-input'>
           <label>Title</label>

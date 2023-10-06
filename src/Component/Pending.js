@@ -95,14 +95,15 @@ function Pending() {
     <>
       <div className='Slab'>
         <div className='pending-header'>
-          <h3>Pending - {tasks.length} tasks</h3>
+          <h3>Pending - {pendingTasks.length} tasks</h3>
           <button className='btn' onClick={handleNewTask}>Add new Task +</button>
         </div>
         <div>
           {pendingTasks.map((task) => (
             <div key={task._id} className='pending-card'>
               <h4 title={task.Desc}>Title: {task.title.toUpperCase()}</h4>
-              <p>status: {task.status}</p>
+              <p className="red">status: {task.status}</p>
+
               <p className='date'>
                 <img src={require('./refresh.png')} className='refresh' alt='' />
                 last updated on {reverseString(task.Date.toString().slice(0, 10))}

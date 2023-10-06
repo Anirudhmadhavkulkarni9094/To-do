@@ -15,8 +15,8 @@ function Card({task}) {
   return (
     <>
     <h4 title={task.Desc }>{task.title}</h4>
-              <p>{task.status}</p>
-              <p>last updated on -{reverseString(task.Date.toString().slice(0,10))}</p>
+    <p className="green">status: {task.status}</p>
+              <p>last updated on {reverseString(task.Date.toString().slice(0,10))}</p>
               <button className='btn' onClick={()=>handleDelete(task._id)}>delete</button>
     </>
   )

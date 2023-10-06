@@ -86,9 +86,7 @@
   border-radius: 1rem;
 }
 
-.newTask{
-  border-radius: 1rem;
-}
+
 
 
 .edit-task{
@@ -114,4 +112,23 @@
 .btn-edit-block{
   display: flex;
   justify-content: space-between;
+}
+
+.red{
+  color: red;
+}
+
+.black{
+  color: black;
+}
+
+.green{
+  color: green
+}
+
+.closeButton{
+  right: 1rem;
+  top: 1rem;
+  position: absolute;
+  width: 1.5rem;
 }
