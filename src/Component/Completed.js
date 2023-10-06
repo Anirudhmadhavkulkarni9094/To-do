@@ -22,6 +22,7 @@ function Completed() {
     <>
       <div className='Slab'>
         <h3>Completed - {pendingTasks.length} tasks</h3>
+        {pendingTasks.length === 0 && <img className='empty' src={require('./completed.png')} alt=''></img>}
         <div>
           {pendingTasks.map(task => (
             <div key={task.id} className='pending-card'>

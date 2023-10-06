@@ -106,7 +106,6 @@ function Pending() {
             <div key={task._id} className='pending-card'>
               <h4 title={task.Desc}>Title: {task.title.toUpperCase()}</h4>
               <p className="red">status: {task.status}</p>
-
               <p className='date'>
                 <img src={require('./refresh.png')} className='refresh' alt='' />
                 last updated on {reverseString(task.Date.toString().slice(0, 10))}
