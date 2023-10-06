@@ -38,7 +38,7 @@ function Working() {
         <div>
           {pendingTasks.map(task => (
             <div key={task.id} className='pending-card'>
-              <h4 title={task.Desc }>{task.title}</h4>
+              <h4 title={task.Desc }>Title: {task.title}</h4>
               <p className='black'>{task.status}</p>
               <p className='date'><img src={require('./refresh.png')} className='refresh' alt=''></img> last updated on {reverseString(task.Date.toString().slice(0,10))}</p> 
               <button className='btn' onClick={()=>handleCompletion(task._id)}>Complete</button>
