@@ -99,7 +99,7 @@ function Pending() {
           <button className='btn' onClick={handleNewTask}>Add new Task +</button>
         </div>
           {
-            (pendingTasks.length === 0) && <img src={require('./NEWTASK.png')} className='newTaskImg'></img> 
+            (pendingTasks.length === 0) && <img src={require('./NEWTASK.png')} className='newTaskImg' alt=''></img> 
           }
         <div>
           {pendingTasks.map((task) => (
