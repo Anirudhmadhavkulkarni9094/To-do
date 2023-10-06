@@ -62,6 +62,10 @@ function Pending() {
     if (!editTask) {
       return;
     }
+    if(title.length === 0 || desc.length === 0) {
+      alert("title or description cannot be empty !");
+      return;
+    }
 
     axios.post(`https://to-do-w2m4.onrender.com/api/v1/task/update/${editTask._id}`, {
       title,

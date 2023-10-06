@@ -10,7 +10,10 @@ function AddingNewTask({ handleClose }) {
   // Function to handle adding a new task
   const handleAddingTask = (e) => {
     e.preventDefault(); // Prevent the form from submitting and page reloading
-
+    if(Title.trim().length === 0 || Desc.trim().length === 0) {
+      alert("title or description cannot be empty !");
+      return;
+    }
     // Send a POST request to the server to add a new task
     axios
       .post('https://to-do-w2m4.onrender.com/api/v1/task', {
